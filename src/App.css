@@ -1,38 +1,468 @@
-.App {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:link {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:visited {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+/* NAVBAR SECTION */
+
+.navbar {
+  padding: 1% 19%;
+  background-color: black;
+}
+
+.nav-link {
+  font-weight: bold;
+  margin-right: 10px;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(231, 10, 113);
+  color: rgb(231, 10, 113);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: rgb(231, 10, 113);
+}
+
+.nav-link:hover {
+  color: rgb(231, 10, 113);
+}
+
+.NavImage {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 250px;
+}
+
+.NavbarLogo {
+  transition: all 0.2s ease-in-out;
+  object-fit: cover;
+  width: 35%;
+}
+
+.NavbarLogo:hover {
+  transform: scale(1.1);
+}
+
+/* TITLE SECTION */
+
+#Title {
+  height: 100vh;
+}
+
+.TitleText {
+  color: white;
+  position: relative;
+  top: 30%;
+  left: 20%;
+  font-family: "Rubik", sans-serif;
+}
+
+.h1Title {
+  font-size: 90px;
+}
+
+.h2Title {
+  color: rgb(231, 10, 113);
+  margin-bottom: 20px;
+}
+
+.GithubTitleLogo,
+.LinkedinTitleLogo {
+  font-size: 30px;
+  margin-right: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.PDFTitleLogo {
+  font-size: 30px;
+  transition: 0.2 ease-in-out;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.PDFTitleLogo:hover,
+.LinkedinTitleLogo:hover,
+.GithubTitleLogo:hover {
+  transform: scale(1.1);
 }
+
+.particles {
+  position: fixed;
+  z-index: -1;
+}
+
+/* ABOUT SECTION */
+
+#AboutSection {
+  height: 90vh;
+}
+
+.aboutContainer {
+  display: flex;
+}
+
+.AboutHeaderText {
+  color: white;
+  position: relative;
+  left: 20%;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 30px;
+}
+
+.meText {
+  color: rgb(231, 10, 113);
+}
+
+.bioText {
+  color: white;
+  margin-left: 70px;
+}
+
+.BioTextDiv {
+  width: 70%;
+  font-family: "Rubik", sans-serif;
+}
+
+.BioDiv {
+  display: flex;
+}
+
+.bioPic {
+  width: 100%;
+  border: 3px solid;
+  border-image: linear-gradient(45deg, purple, orange) 1;
+  position: relative;
+  margin-right: 100px;
+}
+
+.TestimonialDiv {
+  padding-top: 150px;
+  position: relative;
+  left: 3.5%;
+}
+
+.TestHeader {
+  font-family: "Rubik", sans-serif;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.TestSmallText {
+  color: rgb(231, 10, 113);
+  font-family: "Rubik", sans-serif;
+}
+
+.TestBigText {
+  font-family: "Rubik", sans-serif;
+  color: white;
+}
+
+/* SKILLS SECTION */
+
+#skillsSection {
+  height: 50vh;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.HTMLLogo,
+.gitLogo,
+.githubLogo,
+.NodeLogo,
+.CSSLogo,
+.ReactLogo,
+.JSLogo {
+  width: 6%;
+  margin-right: 35px;
+}
+
+.BootstrapLogo {
+  width: 6%;
+}
+
+.HTMLLogo:hover,
+.gitLogo:hover,
+.githubLogo:hover,
+.NodeLogo:hover,
+.CSSLogo:hover,
+.ReactLogo:hover,
+.JSLogo:hover,
+.BootstrapLogo:hover {
+  transform: scale(1.1);
+}
+/* PROJECTS SECTION */
+
+#ProjectsSection {
+  color: white;
+  height: 220vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  font-family: "Rubik", sans-serif;
+}
+
+.cardContainer1 {
+  margin-bottom: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer2 {
+  margin-bottom: 200px;
+}
+
+.card {
+  border: none;
+}
+
+.card-body {
+  background-color: rgb(29, 29, 29);
+  border: none;
+  color: white;
+}
+
+.carousel img {
+  height: 310px;
+  width: 110%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.btn-dark {
+  position: relative;
+  margin-top: 10px;
+}
+
+.Card1,
+.Card2,
+.Card3,
+.Card4 {
+  height: 35rem;
+}
+
+.card-img-top {
+  height: 310px;
+  width: 90%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.projectText {
+  margin-bottom: 60px;
+  font-family: "Rubik", sans-serif;
+  left: 16%;
+  position: relative;
+}
+
+.projectBigText {
+  font-size: 50px;
+}
+
+.projectsSmallText {
+  color: rgb(231, 10, 113);
+  font-size: 25px;
+}
+
+.classBtn,
+.noteBtn,
+.blogBtn {
+  margin-top: 35px;
+}
+
+.teamBtn {
+  margin-top: 12px;
+}
+
+.card-text {
+  font-family: "Rubik", sans-serif;
+}
+
+.card-text1 {
+  font-family: "Rubik", sans-serif;
+}
+
+.card-text2{
+  display: none;
+  font-family: "Rubik", sans-serif;
+}
+
+.w3-tag {
+  border: solid;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-color: white;
+  /* background-color: transparent; */
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  margin-right: 10px;
+  font-family: "Rubik", sans-serif;
+}
+
+.tagsDiv {
+  margin-bottom: 20px;
+}
+
+.FutureProjects {
+  text-align: center;
+}
+
+.FutureHeader {
+  margin-bottom: 100px;
+  font-family: "Rubik", sans-serif;
+}
+
+.WorkingOn {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  top: 200%;
+}
+
+.FutureProject1 {
+  margin-right: 150px;
+  font-family: "Alfa Slab One", cursive;
+}
+
+.FutureProject2 {
+  font-family: "Varela Round", sans-serif;
+  margin-left: 150px;
+}
+/* FOOTER SECTION */
+
+.FooterImage {
+  width: 30%;
+  position: relative;
+  margin-left: 70px;
+  transition: 0.2 ease-in-out;
+}
+
+.FooterImage:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 30vh;
+  background-color: rgb(88, 88, 88);
+  justify-content: center;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  color: rgb(32, 32, 32);
+}
+
+.column {
+  flex: 1 1 25%; /* Four columns each taking 25% of the container width */
+  padding: 10px;
+  box-sizing: border-box;
+  color: rgb(32, 32, 32);
+  margin-top: 25px;
+}
+
+footer a:active {
+  color: rgb(32, 32, 32);
+}
+
+footer a:visited {
+  color: rgb(32, 32, 32);
+}
+
+footer a:link {
+  color: rgb(32, 32, 32);
+}
+
+footer a:hover {
+  color: rgb(15, 15, 15);
+}
+
+.LinksHeader,
+.ProjectsFooterHeader,
+.InfoHeader {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  #Title {
+    height: 40vh;
+  }
+
+  #AboutSection {
+    height: 40vh;
+  }
+
+  #skillsSection{
+    height: 30vh;
+  }
+
+  #ProjectsSection {
+    height: 110vh;
+  
+  }
+
+  footer{
+    height: 16vh;
+  }
+
+  .projectText{
+    left: 7%;
+  }
+
+  .AboutHeaderText{
+    left: 13%;
+  }
+
+  .card-text1{
+    display: none;
+  }
+
+  .card-text2{
+    display: initial;
+  }
+
+  .teamBtn {
+    margin-top: 52px;
+  }
+
+  .TeamTags{
+    display: none;
+  }
+
+}
+
+
