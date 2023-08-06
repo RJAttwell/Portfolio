@@ -105,11 +105,9 @@ export default function Projects() {
                   <span class="w3-tag">React</span>
                   <span class="w3-tag">Google Maps API</span>
                   <span class="w3-tag">JavaScript</span>
-                  <div className="TeamTags">
-                    <span class="w3-tag">Spline</span>
-                    <span class="w3-tag">CSS</span>
-                    <span class="w3-tag">React Router</span>
-                  </div>
+                  <span class="w3-tag">Spline</span>
+                  <span class="w3-tag">CSS</span>
+                  <span class="w3-tag">React Router</span>
                 </div>
 
                 <div className="TeamCard-Text1">
